@@ -14,7 +14,7 @@ public class EmailService implements IEmail {
         this.emailRepository = emailRepository;
     }
 
-
+//commit this part 
     @Override
     public void SEmail(Email email, User receiver) throws Exception {
         emailRepository.SEmail(email, receiver);
