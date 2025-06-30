@@ -34,7 +34,7 @@ public class EmailRepository implements IEmail {
     public void REmail(Email oldEmail, Email replyEmail) throws Exception {
         replyEmail.setReply(oldEmail);
         try {
-            sendEmail(replyEmail, oldEmail.getSender());
+            SEmail(replyEmail, oldEmail.getSender());
         } catch (Exception e) {
             throw new Exception(e);
         }
