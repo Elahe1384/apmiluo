@@ -45,17 +45,37 @@ public class HomePage {
         JButton newConvBtn = new JButton("New Conversation");
         newConvBtn.setMaximumSize(new Dimension(Short.MAX_VALUE, 40));
         newConvBtn.addActionListener(action -> newConversionAction(homePage));
+        newConvBtn.setBackground(new Color(180, 60, 120)); // صورتی بنفش گرم
+        newConvBtn.setForeground(Color.WHITE);
+        newConvBtn.setOpaque(true);
+        newConvBtn.setBorderPainted(false);
 
         // Setting button.
         JButton settingsButton = new JButton("Settings");
         settingsButton.addActionListener(e -> openSettingsDialog());
+        settingsButton.setBackground(new Color(180, 60, 120));
+        settingsButton.setForeground(Color.WHITE);
+        settingsButton.setOpaque(true);
+        settingsButton.setBorderPainted(false);
+
 
         // Email type button.
         JButton emailType = configureEmailTypeButton();
+        emailType.setBackground(new Color(180, 60, 120));
+        emailType.setForeground(Color.WHITE);
+        emailType.setOpaque(true);
+        emailType.setBorderPainted(false);
+
 
         // Send email button.
         JButton sendEmail = new JButton("send email");
         sendEmail.addActionListener(action -> sendEmailAction(homePage));
+        sendEmail.setBackground(new Color(180, 60, 120));
+        sendEmail.setForeground(Color.WHITE);
+        sendEmail.setOpaque(true);
+        sendEmail.setBorderPainted(false);
+
+
 
         // Add setting button to setting panel.
         emailTopPanel.add(settingsButton, BorderLayout.EAST);
@@ -106,7 +126,7 @@ public class HomePage {
     private JPanel configureUserPanel() {
         JPanel userPanel = new JPanel();
         userPanel.setLayout(new BoxLayout(userPanel, BoxLayout.Y_AXIS));
-        userPanel.setBackground(Color.BLACK);
+        userPanel.setBackground(new Color(240, 230, 250));
         return userPanel;
     }
 
@@ -120,13 +140,13 @@ public class HomePage {
     private JPanel configureEmailPanel() {
         JPanel emailPanel = new JPanel();
         emailPanel.setLayout(new BoxLayout(emailPanel, BoxLayout.Y_AXIS));
-        emailPanel.setBackground(Color.WHITE);
+        emailPanel.setBackground(new Color(240, 230, 250));
         return emailPanel;
     }
 
     private JPanel configureTopEmailPanel() {
         JPanel emailTopPanel = new JPanel(new BorderLayout());
-        emailTopPanel.setBackground(Color.WHITE);
+        emailTopPanel.setBackground(new Color(230, 210, 230));
         return emailTopPanel;
     }
 
@@ -479,11 +499,23 @@ public class HomePage {
             buttonsPanel.setOpaque(false);
 
             JButton markAsRead = new JButton("Mark as read");
+            markAsRead.setBackground(new Color(180, 60, 120));
+            markAsRead.setForeground(Color.WHITE);
+            markAsRead.setOpaque(true);
+            markAsRead.setBorderPainted(false);
 
             JButton replyButton = new JButton("Reply");
+            replyButton.setBackground(new Color(180, 60, 120));
+            replyButton.setForeground(Color.WHITE);
+            replyButton.setOpaque(true);
+            replyButton.setBorderPainted(false);
             replyButton.addActionListener(action -> replyAction(markAsRead));
 
             JButton forwardButton = new JButton("Forward");
+            forwardButton.setBackground(new Color(180, 60, 120));
+            forwardButton.setForeground(Color.WHITE);
+            forwardButton.setOpaque(true);
+            forwardButton.setBorderPainted(false);
             forwardButton.addActionListener(action -> forwardAction(markAsRead));
 
 
