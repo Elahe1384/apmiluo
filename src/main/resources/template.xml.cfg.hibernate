@@ -9,7 +9,7 @@
             org.mariadb.jdbc.Driver
         </property>
         <property name="hibernate.connection.url">
-            Db_url
+            jdbc:mariadb://localhost:3306/email_db
         </property>
         <property name="hibernate.connection.username">
             username

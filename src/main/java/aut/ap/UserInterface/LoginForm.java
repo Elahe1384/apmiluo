@@ -20,13 +20,13 @@ public class LoginForm {
     }
 
     public void createUI() {
-        // رنگ‌های تم صورتی و بنفش
-        Color pinkColor = new Color(255, 182, 193); // صورتی روشن
-        Color purpleColor = new Color(147, 112, 219); // بنفش متوسط
-        Color darkPurple = new Color(102, 51, 153); // بنفش تیره
-        Color lightPink = new Color(255, 209, 220); // صورتی خیلی روشن
+        // رنگ‌های صورتی و بنفش
+        Color pinkColor = new Color(255, 182, 193);
+        Color purpleColor = new Color(147, 112, 219);
+        Color darkPurple = new Color(102, 51, 153);
+        Color lightPink = new Color(255, 209, 220);
 
-        // Create Frame and configure it.
+
         JFrame loginFrame = new JFrame();
         loginFrame.setTitle("Email App login");
         loginFrame.setSize(new Dimension(550, 400));
@@ -35,18 +35,18 @@ public class LoginForm {
         loginFrame.setResizable(false);
         loginFrame.getContentPane().setBackground(lightPink);
 
-        // Create tab page.
+
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.setBackground(pinkColor);
         tabbedPane.setForeground(darkPurple);
         tabbedPane.setFont(new Font("Segoe UI", Font.BOLD, 14));
 
-        // Login Panel.
+
         JPanel loginPanel = new JPanel(new GridBagLayout());
         loginPanel.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
         loginPanel.setBackground(lightPink);
 
-        // Login panel field.
+
         JTextField loginEmail = new JTextField();
         styleTextField(loginEmail);
         JPasswordField loginPassword = new JPasswordField();
@@ -54,12 +54,12 @@ public class LoginForm {
         JButton loginButton = new JButton("Login");
         styleButton(loginButton, purpleColor);
 
-        // sign up Panel.
+
         JPanel signUpPanel = new JPanel(new GridBagLayout());
         signUpPanel.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50));
         signUpPanel.setBackground(lightPink);
 
-        // sign up panel field.
+
         JTextField regUsername = new JTextField();
         styleTextField(regUsername);
         JTextField regEmail = new JTextField();
@@ -69,34 +69,28 @@ public class LoginForm {
         JButton regButton = new JButton("Sign Up");
         styleButton(regButton, purpleColor);
 
-        // labels styling
         JLabel userName = createStyledLabel("Username:", darkPurple);
         JLabel email = createStyledLabel("Email:", darkPurple);
         JLabel password = createStyledLabel("Password:", darkPurple);
 
-        // Add component to login panel
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(6, 6, 6, 6);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        // Email Label
         gbc.gridx = 0;
         gbc.gridy = 0;
         loginPanel.add(email, gbc);
 
-        // Email Field
         gbc.gridx = 1;
         gbc.gridy = 0;
         gbc.weightx = 1.0;
         loginPanel.add(loginEmail, gbc);
 
-        // Password Label
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.weightx = 0;
         loginPanel.add(password, gbc);
 
-        // Password Field
         gbc.gridx = 1;
         gbc.gridy = 1;
         gbc.weightx = 1.0;
@@ -110,7 +104,7 @@ public class LoginForm {
         gbc.weightx = 1.0;
         loginPanel.add(loginButton, gbc);
 
-        // GridBagConstraints for register panel
+
         GridBagConstraints gbc2 = new GridBagConstraints();
         gbc2.insets = new Insets(6, 6, 6, 6);
         gbc2.fill = GridBagConstraints.HORIZONTAL;
@@ -152,7 +146,7 @@ public class LoginForm {
         gbc2.gridwidth = 2;
         signUpPanel.add(regButton, gbc2);
 
-        // Add Action listeners
+
         loginButton.addActionListener(action -> {
             String userEmail = loginEmail.getText();
             String userPassword = String.valueOf(loginPassword.getPassword());
